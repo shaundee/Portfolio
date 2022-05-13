@@ -7,20 +7,27 @@ import me from '../public/me.jpg'
 import AboutMe from '../components/AboutMe'
 import Experience from '../components/Experience'
 import Typewriter from 'typewriter-effect'
+import Contact from '../components/Contact'
+import { useEffect, useRef } from 'react'
 
 const Home = () => {
+  const projectsRef = useRef(null)
+  const aboutRef = useRef(null)
+  const workRef = useRef(null)
+  const contactRef = useRef(null)
+  const homeRef = useRef(null)
+
   return (
-    <div id="home" className="  pb-4 font-serif ">
-      <ParticlesBG />
+    <div id="home" className="  font-serif">
       <Head>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
+      <NavBar ref={[projectsRef, aboutRef, workRef, contactRef, homeRef]} />
 
-      <div className="absolute left-2/4 top-2/4 h-[200px] w-[200px] -translate-x-2/4 -translate-y-2/4  rounded-full border-2 border-[#930000]  md:h-[300px] md:w-[300px]">
+      <div className="absolute left-2/4 top-2/4 h-[150px] w-[150px] -translate-x-2/4 -translate-y-2/4 rounded-full border-2 border-[#930000] md:h-[300px] md:w-[300px]">
         <Image src={me} className=" rounded-full" />
-        <p className="typeWriter mt-4 ">
+        <div className="typeWriter mt-4 ">
           <Typewriter
             options={{
               strings: [
@@ -32,13 +39,14 @@ const Home = () => {
               skipAddStyles: false,
             }}
           />
-        </p>
+        </div>
       </div>
-
-      <main>
-        <Projects />
-        <AboutMe />
-        <Experience />
+      <ParticlesBG />
+      <main className="">
+        <Projects ref={projectsRef} />
+        <AboutMe ref={aboutRef} />
+        <Experience ref={workRef} />
+        <Contact ref={contactRef} />
       </main>
     </div>
   )

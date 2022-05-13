@@ -4,14 +4,14 @@
 
 @layer base {
   body {
-    @apply bg-[#7711d6] bg-gradient-to-b from-[#d8d50aa2] text-white;
+    @apply bg-indigo-900 text-white;
   }
 }
 
 @layer components {
   /* navBar */
   .navLinks {
-    @apply -rotate-[45deg] cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[.4s] hover:text-[#930000];
+    @apply -rotate-[45deg] cursor-pointer text-lg font-light text-white  hover:text-indigo-400;
   }
   .typeWriter {
     @apply flex min-h-fit items-center justify-center rounded-2xl bg-transparent p-4 text-center font-serif text-lg font-semibold;
@@ -23,6 +23,16 @@
     width: 350px;
     margin: 50px auto;
     perspective: 1000px;
+  }
+  /* Material UI */
+  .menu .MuiPaper-root {
+    @apply !absolute !left-0 !top-[60px] !flex  !h-screen !items-center !rounded-none !bg-indigo-700 !text-white;
+  }
+  .menu .MuiMenuItem-root {
+    @apply hover:!bg-indigo-900;
+  }
+  .menu {
+    @apply md:hidden;
   }
 
   .rotator {

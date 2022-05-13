@@ -12,7 +12,7 @@ import tailwind from '../public/techIcons/tailwind.png'
 
 const Slider = () => {
   return (
-    <div className="slider -mt-[100px] hidden md:inline md:w-[100px] lg:w-[175px] xl:left-44 ">
+    <div className="slider -mt-[100px] hidden md:inline md:w-[100px] lg:right-5 lg:w-[175px] ">
       <div className="rotator md:h-[100px] md:w-[100px] lg:h-[100px] xl:h-[120px] xl:w-[120px] ">
         <div className="items  md:pt-5">
           <Image className="img " src={tailwind} alt="items photo" />

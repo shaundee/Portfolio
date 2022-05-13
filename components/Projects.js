@@ -2,54 +2,50 @@ import Image from 'next/image'
 import netflix from '../public/netflix.png'
 import APOD from '../public/APOD.png'
 import spotify from '../public/spotify.png'
+import Link from 'next/link'
+import { projectsState } from '../atoms/elementRefAtoms'
+import { useRecoilState } from 'recoil'
+import React, { useEffect, useRef } from 'react'
+import scrollToSection from '../lib/scrollTo'
 
-const Projects = () => {
+const Projects = (props, ref) => {
   return (
     <div
-      id="projects"
-      className=" mb-4  flex h-screen items-center px-4 md:pl-40 xl:px-40"
+      ref={ref}
+      className=" mb-20  flex items-center justify-center  px-2 md:h-screen md:px-4 md:pl-40 xl:pl-40 xl:pr-20"
     >
-      <div className="mx-auto grid max-w-lg grid-cols-1 gap-2 md:max-w-4xl md:grid-cols-3 xl:max-w-7xl xl:grid-cols-2 ">
-        <h1 className="col-span-full mx-auto mb-20 text-4xl font-semibold text-lime-400">
-          Some things I've built
+      <div className="  grid w-full grid-cols-1 gap-4 md:max-w-full md:grid-cols-3  ">
+        <h1 className="col-span-full mb-10 text-left text-4xl font-semibold text-lime-400">
+          Things I've built <hr className="w-2/4"></hr>
         </h1>
-        <div className="nasa_apod mx-auto rounded-2xl ">
-          <h1 className="  rounded-2xl p-4 text-center text-base hover:text-[#e2e04a] hover:underline">
+        <div className="nasa_apod  mx-auto rounded-2xl bg-indigo-700 px-2">
+          <h1 className="  rounded-2xl p-4 text-center text-base text-[#e2e04a] ">
             NASA-APOD
           </h1>
-          <a href="https://nasa-apod-smoky.vercel.app/" target="_blank">
-            <Image
-              className=" rounded-2xl opacity-80 transition-all ease-in hover:opacity-100 "
-              src={APOD}
-            />
-          </a>
 
-          <a href="https://nasa-apod-smoky.vercel.app/" target="_blank"></a>
+          <Image
+            className=" rounded-2xl opacity-60 transition-all ease-in hover:cursor-pointer hover:opacity-100 "
+            src={APOD}
+          />
+
           <p className=" rounded-2xl p-4 text-center text-base ">
             Discover the cosmos with the Nasa Astronomy Picture of the day.
-            Everyday A majestic new image or video gets featured along with a
-            breif description. have a look at your most recent birthday. enjoy
-            the eye candy!
+            Everyday A majestic new image or video gets featured along with Link
+            breif description. have Link look at your most recent birthday.
+            enjoy the eye candy!
           </p>
         </div>
 
-        <div className="spotify mx-auto rounded-2xl ">
-          <h1 className=" rounded-2xl p-4 text-center text-base hover:text-[#e2e04a] hover:underline">
+        <div className="spotify mx-auto rounded-2xl bg-indigo-700 px-2  ">
+          <h1 className=" rounded-2xl p-4 text-center text-base text-[#e2e04a] ">
             Spotify-Clone
           </h1>
-          <a
-            href="https://spotify-46qepr57d-shaundee.vercel.app/login?callbackUrl=https://spotify-46qepr57d-shaundee.vercel.app&error=OAuthCallback"
-            target="_blank"
-          >
-            <Image
-              className=" rounded-2xl opacity-80 transition-all ease-in hover:opacity-100"
-              src={spotify}
-            />
-          </a>
-          <a
-            href="https://spotify-46qepr57d-shaundee.vercel.app/login?callbackUrl=https://spotify-46qepr57d-shaundee.vercel.app&error=OAuthCallback"
-            target="_blank"
-          ></a>
+
+          <Image
+            className=" rounded-2xl opacity-60 transition-all ease-in hover:cursor-pointer hover:opacity-100 "
+            src={spotify}
+          />
+
           <p className="   rounded-2xl p-4 text-center text-base ">
             As the name states this a spotify clone built with the spotiy API
             and follows the spotify oauth flow for full user authentication. It
@@ -58,27 +54,20 @@ const Projects = () => {
             main app open.
           </p>
         </div>
-        <div className="netflix mx-auto rounded-2xl ">
-          <h1 className=" rounded-2xl p-4 text-center text-base hover:text-[#e2e04a] hover:underline ">
+        <div className="netflix mx-auto rounded-2xl bg-indigo-700 px-2">
+          <h1 className=" rounded-2xl p-4 text-center text-base text-[#e2e04a]  ">
             Netflix-Clone
           </h1>
-          <a
-            href="https://netflix-clone-pied-seven.vercel.app/"
-            target="_blank"
-          >
-            <Image
-              className="rounded-2xl opacity-80 transition-all ease-in hover:opacity-100"
-              src={netflix}
-            />
-          </a>
-          <a
-            href="https://netflix-clone-pied-seven.vercel.app/"
-            target="_blank"
-          ></a>
+
+          <Image
+            className="rounded-2xl opacity-60 transition-all ease-in hover:cursor-pointer hover:opacity-100 "
+            src={netflix}
+          />
+
           <p className="  rounded-2xl p-4  text-center text-base">
             A netflix clone with an amazing UI and uses firebase for full user
-            authentication as well as stripe for payment transitions. Also
-            utilizes the TMDB api for the all the data which is all rendered
+            authentication as well as stripe for payment transactions. Also
+            utilizes the TMDB API for the all the data which is all rendered
             server-side using next.js.
           </p>
         </div>
@@ -87,4 +76,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default React.forwardRef(Projects)

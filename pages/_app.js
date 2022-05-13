@@ -1,8 +1,13 @@
 import '../styles/globals.css'
-import ParticlesBG from '../components/ParticlesBG'
+import { RecoilRoot } from 'recoil'
+import { useRef } from 'react'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  )
 }
 
 export default MyApp
