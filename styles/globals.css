@@ -4,17 +4,20 @@
 
 @layer base {
   body {
-    @apply bg-indigo-900 text-white;
+    @apply bg-slate-900  text-white scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-slate-500;
   }
 }
 
 @layer components {
+  /* Home */
+  .Typewriter {
+    @apply absolute  left-2/4 top-2/3 mt-10  flex flex w-full -translate-x-2/4  
+     -translate-y-2/3 justify-center rounded-md  text-center  font-mono text-sm  font-semibold md:text-lg;
+  }
+
   /* navBar */
   .navLinks {
-    @apply -rotate-[45deg] cursor-pointer text-lg font-light text-white  hover:text-indigo-400;
-  }
-  .typeWriter {
-    @apply flex min-h-fit items-center justify-center rounded-2xl bg-transparent p-4 text-center font-serif text-lg font-semibold;
+    @apply cursor-pointer select-none border-b-2 border-transparent font-mono text-lg  font-bold text-emerald-300 transition-all hover:border-emerald-300  hover:text-purple-600;
   }
 
   /* Image Slider */
@@ -24,17 +27,37 @@
     margin: 50px auto;
     perspective: 1000px;
   }
-  /* Material UI */
+  /* Material UI menu*/
+  #basic-button {
+    @apply !flex h-16 !items-center !justify-center;
+  }
   .menu .MuiPaper-root {
-    @apply !absolute !left-0 !top-[60px] !flex  !h-screen !items-center !rounded-none !bg-indigo-700 !text-white;
+    @apply !absolute !right-0 !top-0 !flex !h-full !items-center !rounded-none !bg-indigo-900/20 !text-white backdrop-blur-sm;
   }
   .menu .MuiMenuItem-root {
-    @apply hover:!bg-indigo-900;
+    @apply text-fuchsia-900 hover:!bg-indigo-700 hover:text-emerald-300;
   }
   .menu {
-    @apply md:hidden;
+    @apply mt-16 h-full hover:cursor-pointer md:hidden;
   }
-
+  /* Project */
+  .projectHeaders {
+    @apply flex justify-around bg-indigo-900 p-4 text-center text-base text-emerald-300 lg:text-xl;
+  }
+  .projectIcons {
+    @apply h-6 w-6 text-emerald-300 hover:text-fuchsia-900;
+  }
+  .projectImage {
+    @apply rounded-md transition-all ease-in hover:cursor-pointer hover:opacity-100 md:opacity-60;
+  }
+  .projectBodies {
+    @apply mx-auto flex min-h-[24rem]  flex-col justify-center bg-black/90 bg-center p-8
+    text-center bg-blend-darken md:max-w-2xl md:bg-black/0 md:text-left;
+  }
+  .techUsed {
+    @apply border border-emerald-300 p-1;
+  }
+  /* slider */
   .rotator {
     position: absolute;
     left: 0;
@@ -77,86 +100,85 @@
     animation-play-state: paused;
   }
 
-  @media (min-width: 768px) {
-    .items {
-      border: white;
-    }
-    .items:first-child {
-      transform: rotateY(calc(40deg)) translateZ(130px);
-    }
-
-    .items:nth-child(2) {
-      transform: rotateY(calc(80deg)) translateZ(130px);
-    }
-
-    .items:nth-child(3) {
-      transform: rotateY(calc(120deg)) translateZ(130px);
-    }
-
-    .items:nth-child(4) {
-      transform: rotateY(calc(160deg)) translateZ(130px);
-    }
-
-    .items:nth-child(5) {
-      transform: rotateY(calc(200deg)) translateZ(130px);
-    }
-
-    .items:nth-child(6) {
-      transform: rotateY(calc(240deg)) translateZ(130px);
-    }
-
-    .items:nth-child(7) {
-      transform: rotateY(calc(280deg)) translateZ(130px);
-    }
-
-    .items:nth-child(8) {
-      transform: rotateY(calc(320deg)) translateZ(130px);
-    }
-
-    .items:nth-child(9) {
-      transform: rotateY(calc(360deg)) translateZ(130px);
-    }
+  .items {
+    border: white;
   }
-  @media (min-width: 1024px) {
-    .items {
-      border: 2px solid red;
-    }
-    .items:first-child {
-      transform: rotateY(calc(40deg)) translateZ(200px);
-    }
-
-    .items:nth-child(2) {
-      transform: rotateY(calc(80deg)) translateZ(200px);
-    }
-
-    .items:nth-child(3) {
-      transform: rotateY(calc(120deg)) translateZ(200px);
-    }
-
-    .items:nth-child(4) {
-      transform: rotateY(calc(160deg)) translateZ(200px);
-    }
-
-    .items:nth-child(5) {
-      transform: rotateY(calc(200deg)) translateZ(200px);
-    }
-
-    .items:nth-child(6) {
-      transform: rotateY(calc(240deg)) translateZ(200px);
-    }
-
-    .items:nth-child(7) {
-      transform: rotateY(calc(280deg)) translateZ(200px);
-    }
-
-    .items:nth-child(8) {
-      transform: rotateY(calc(320deg)) translateZ(200px);
-    }
-
-    .items:nth-child(9) {
-      transform: rotateY(calc(360deg)) translateZ(200px);
-    }
+  .items:first-child {
+    transform: rotateY(calc(40deg)) translateZ(130px);
   }
+
+  .items:nth-child(2) {
+    transform: rotateY(calc(80deg)) translateZ(130px);
+  }
+
+  .items:nth-child(3) {
+    transform: rotateY(calc(120deg)) translateZ(130px);
+  }
+
+  .items:nth-child(4) {
+    transform: rotateY(calc(160deg)) translateZ(130px);
+  }
+
+  .items:nth-child(5) {
+    transform: rotateY(calc(200deg)) translateZ(130px);
+  }
+
+  .items:nth-child(6) {
+    transform: rotateY(calc(240deg)) translateZ(130px);
+  }
+
+  .items:nth-child(7) {
+    transform: rotateY(calc(280deg)) translateZ(130px);
+  }
+
+  .items:nth-child(8) {
+    transform: rotateY(calc(320deg)) translateZ(130px);
+  }
+
+  .items:nth-child(9) {
+    transform: rotateY(calc(360deg)) translateZ(130px);
+  }
+}
+@media (min-width: 1024px) {
+  .items {
+    border: 2px solid red;
+  }
+  .items:first-child {
+    transform: rotateY(calc(40deg)) translateZ(200px);
+  }
+
+  .items:nth-child(2) {
+    transform: rotateY(calc(80deg)) translateZ(200px);
+  }
+
+  .items:nth-child(3) {
+    transform: rotateY(calc(120deg)) translateZ(200px);
+  }
+
+  .items:nth-child(4) {
+    transform: rotateY(calc(160deg)) translateZ(200px);
+  }
+
+  .items:nth-child(5) {
+    transform: rotateY(calc(200deg)) translateZ(200px);
+  }
+
+  .items:nth-child(6) {
+    transform: rotateY(calc(240deg)) translateZ(200px);
+  }
+
+  .items:nth-child(7) {
+    transform: rotateY(calc(280deg)) translateZ(200px);
+  }
+
+  .items:nth-child(8) {
+    transform: rotateY(calc(320deg)) translateZ(200px);
+  }
+
+  .items:nth-child(9) {
+    transform: rotateY(calc(360deg)) translateZ(200px);
+  }
+
   @media (min-width: 1280px) {
     .items:first-child {
       transform: rotateY(calc(40deg)) translateZ(250px);
@@ -195,6 +217,3 @@
     }
   }
 }
-/* .project__text{
-    @apply -ml-48 text-center text-lg px-4 text-white;
-} */

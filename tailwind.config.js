@@ -5,7 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'NASA-APOD': "url('/public/APOD.png')",
+      },
+    },
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+
+  plugins: [require('tailwind-scrollbar-hide'), require('tailwind-scrollbar')],
 }

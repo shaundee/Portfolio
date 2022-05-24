@@ -1,6 +1,10 @@
 import { atom } from 'recoil'
 
-export const projectsState = atom({
-  key: 'projectsState',
-  default: null,
+export const directionState = atom({
+  key: 'directionState',
+  default: '',
+})
+export const showLoaderState = atom({
+  key: 'showLoaderState ',
+  default: true,
 })
