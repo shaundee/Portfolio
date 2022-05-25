@@ -39,7 +39,7 @@ const Contact = (props, ref) => {
         variants={contactVariants}
         initial="init"
         animate={controls}
-        className="mx-auto mb-10 border-b border-fuchsia-900 px-4 text-center text-xl font-semibold text-white md:text-4xl"
+        className="mx-auto mb-10 border-b border-fuchsia-900 px-4 text-center font-mono text-2xl font-semibold text-white md:text-4xl"
       >
         Contact Me
       </motion.h1>

@@ -35,7 +35,7 @@ const AboutMe = (props, ref) => {
       ref={ref}
       id="aboutMe"
       className="  flex flex-col items-center justify-center bg-slate-900 bg-[url('https://wallpapercave.com/wp/wp2553589.jpg')]  bg-auto 
-      bg-bottom bg-blend-darken md:h-screen md:pl-40 md:text-lg lg:text-xl "
+      bg-bottom px-10 bg-blend-darken md:h-screen md:px-20 md:text-lg lg:text-xl "
     >
       <motion.div
         ref={elRef}
@@ -49,10 +49,10 @@ const AboutMe = (props, ref) => {
           variants={aboutVariants}
           initial="init"
           animate={controls}
-          className=" relative col-span-2 mb-10 text-right font-mono text-xl text-white md:text-4xl "
+          className=" col-span-2 mb-10 flex flex-col text-center font-mono text-2xl text-white md:text-right md:text-4xl "
         >
           A bit About Me
-          <hr className="absolute right-0 w-2/4 border-fuchsia-900"></hr>
+          <hr className="w-2/4 self-center border-fuchsia-900 md:self-end"></hr>
         </motion.h2>
         <motion.div
           ref={elRef}

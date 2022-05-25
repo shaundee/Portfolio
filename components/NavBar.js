@@ -20,8 +20,7 @@ const linkVariants = {
       mass: 0.4,
       damping: 7,
       stiffness: 100,
-      staggerChildren: 0.1,
-      delay: -0,
+      staggerChildren: 0.2,
     },
   },
 }

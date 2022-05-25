@@ -10,11 +10,13 @@ import Image from 'next/image'
 import { Typewriter } from 'react-simple-typewriter'
 
 const spinTransition = {
-  duration: 4,
+  duration: 1,
   ease: 'linear',
+  delay: 1.5,
 }
 const growTransition = {
   duration: 1,
+  delay: 1.5,
 }
 const animateVariants = {
   init: {
@@ -28,7 +30,7 @@ const animateVariants = {
       mass: 8,
       damping: 50,
       stiffness: 180,
-      delay: 1,
+      delay: 2,
     },
   },
 }
@@ -46,9 +48,9 @@ const ParticlesBG = () => {
   return (
     <div className=" flex h-screen w-screen items-center justify-center ">
       <motion.div
-        className="absolute z-10 flex h-[180px] w-[180px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-emerald-300
+        className="absolute z-10 flex h-[180px] w-[180px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-emerald-300 border-t-transparent border-r-transparent
          bg-slate-900/50  hover:border-fuchsia-900  hover:bg-slate-900/0 hover:duration-300 hover:ease-in-out"
-        animate={{ scale: 1 }}
+        animate={{ scale: [0, 1], rotate: 360 }}
         transition={spinTransition}
       ></motion.div>
 
@@ -178,8 +180,8 @@ const ParticlesBG = () => {
               density: {
                 enable: true,
               },
-              value: 70,
-              limit: 150,
+              value: 100,
+              limit: 120,
             },
             opacity: {
               value: 1,

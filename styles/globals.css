@@ -75,16 +75,13 @@
     overflow: hidden;
     border: 2px solid red;
     background: white;
+    padding: 20px;
   }
 
   .items img {
     height: 100%;
     width: 100%;
     transition: all 3s ease;
-  }
-
-  .items:hover img {
-    transform: scale(1.1);
   }
 
   @keyframes roter {

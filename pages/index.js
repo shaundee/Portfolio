@@ -26,7 +26,7 @@ const Home = () => {
   const [pageEnd, setPageEnd] = useState('')
 
   const endOfPage = () => {
-    if (window.pageYOffset > 3400) {
+    if (window.pageYOffset > 3200) {
       setPageEnd('closeToEndOfPage')
       console.log('close TO End')
     } else {
@@ -41,14 +41,9 @@ const Home = () => {
   }, [])
 
   return showLoader === false ? (
-    <div
-      className={`${
-        showLoader && 'overflow-hidden'
-      }select-none overflow-hidden font-serif`}
-      ref={homeRef}
-    >
+    <div className={`select-none font-serif`} ref={homeRef}>
       <Head>
-        <title>Home</title>
+        <title>Shaundee Wilson</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -72,8 +67,8 @@ const Home = () => {
         }
         title="Back to top"
         className={`${
-          pageEnd === 'closeToEndOfPage' && 'bottom-6 '
-        } fixed left-2/4 -bottom-16 z-50 flex h-10 w-10 -translate-x-2/4 items-center justify-center rounded-full bg-black text-fuchsia-900 duration-300 hover:cursor-pointer hover:text-emerald-300`}
+          pageEnd === 'closeToEndOfPage' && 'bottom-10 '
+        } fixed left-2/4 -bottom-10 z-50 flex h-10 w-10 -translate-x-2/4 items-center justify-center rounded-full bg-black text-fuchsia-900 duration-300 hover:cursor-pointer hover:text-emerald-300 `}
       >
         <GiFlamingArrow className=" h-8 w-8 -rotate-[135deg] " />
       </div>

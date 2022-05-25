@@ -65,16 +65,17 @@ const Projects = (props, ref) => {
   return (
     <div
       ref={ref}
-      className=" flex flex-col items-center justify-center bg-auto bg-bottom px-2 bg-blend-darken md:py-8 md:px-4 "
+      className=" flex flex-col items-center justify-center bg-auto bg-bottom px-4 bg-blend-darken md:py-8 md:px-4 "
     >
       <motion.h1
         ref={h1ElRef}
         variants={h1Variant}
         initial="init"
         animate={h1Controls}
-        className={`mb-10 text-left text-4xl font-semibold text-white md:self-start`}
+        className={`mb-10 flex flex-col px-8 text-left font-mono text-2xl font-semibold text-white md:self-start md:text-4xl`}
       >
-        Personal Projects & Clones <hr className="border-fuchsia-900"></hr>
+        Personal Projects & Clones{' '}
+        <hr className="w-[110%] self-center border-fuchsia-900 md:w-[125%] md:self-start"></hr>
       </motion.h1>
 
       <motion.div
@@ -109,9 +110,12 @@ const Projects = (props, ref) => {
           </h2>
           <div className="projectBodies bg-[url('../public/APOD.png')] md:bg-none">
             <Link href="https://nasa-apod-smoky.vercel.app/">
-              <div className="mb-4 hidden md:inline">
+              <motion.div
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                className="mb-4 hidden md:inline"
+              >
                 <Image className="projectImage" src={APOD} />
-              </div>
+              </motion.div>
             </Link>
             <p className="  ">
               Discover the cosmos with the Nasa Astronomy Picture of the day.
@@ -147,9 +151,12 @@ const Projects = (props, ref) => {
           </h2>
           <div className="projectBodies bg-[url('../public/spotify.png')] bg-cover bg-left md:bg-none ">
             <Link href="https://spotify-sooty.vercel.app/login">
-              <div className="mb-4 hidden md:inline">
+              <motion.div
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                className="mb-4 hidden md:inline"
+              >
                 <Image className="projectImage" src={spotify} />
-              </div>
+              </motion.div>
             </Link>
             <p className="  ">
               As the name states this a spotify clone built with the spotiy API
@@ -185,9 +192,12 @@ const Projects = (props, ref) => {
           </h2>
           <div className="projectBodies bg-[url('../public/netflix.png')] bg-left-top md:bg-none">
             <Link href="https://netflix-clone-shaundee.vercel.app/">
-              <div className="mb-4 hidden md:inline">
+              <motion.div
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                className="mb-4 hidden md:inline"
+              >
                 <Image className="projectImage " src={netflix} />
-              </div>
+              </motion.div>
             </Link>
             <p className="  ">
               A netflix clone with an amazing UI and uses firebase for full user

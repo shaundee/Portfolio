@@ -35,17 +35,18 @@ const Experience = (props, ref) => {
     <div
       ref={ref}
       id="experience"
-      className="flex h-[100vh] flex-col justify-center  bg-slate-900/95 bg-[url('https://magazine.fbk.eu/wp-content/uploads/2018/08/Fotolia_FAS.jpg')] bg-cover bg-center px-2 
-      bg-blend-hue md:text-lg lg:text-xl xl:text-2xl"
+      className="flex h-[100vh] flex-col justify-center gap-y-10 bg-slate-900/95 bg-[url('https://magazine.fbk.eu/wp-content/uploads/2018/08/Fotolia_FAS.jpg')] bg-cover bg-center
+     px-4  bg-blend-hue md:pr-32 md:text-lg lg:text-xl xl:text-2xl"
     >
       <motion.h1
         ref={elRef}
         variants={experienceVariants}
         initial="init"
         animate={controls}
-        className="mb-10 px-4 text-left text-xl font-semibold text-white md:pl-40 md:text-4xl"
+        className="mb-10 flex flex-col self-center px-4 text-center font-mono text-2xl font-semibold text-white md:self-start md:pl-20 md:text-left md:text-4xl"
       >
-        Work <hr className="w-2/4 border-fuchsia-900"></hr>
+        Work
+        <hr className="w-[200%] self-center border-fuchsia-900 md:self-start "></hr>
       </motion.h1>
       <motion.div
         ref={elRef}
@@ -54,7 +55,7 @@ const Experience = (props, ref) => {
         animate={controls}
         className=" relative mx-auto mb-20 grid grid-cols-1  md:grid-cols-2 xl:max-w-7xl  xl:pr-16"
       >
-        <div className="absolute top-2/4 z-10 -translate-y-2/4 rounded-2xl bg-indigo-700/50 p-4 text-left md:left-32 md:max-w-md lg:max-w-xl  xl:max-w-3xl">
+        <div className="absolute top-2/4 z-10 max-w-[30rem] -translate-y-2/4 rounded-2xl bg-indigo-700/50 p-4 text-left md:left-32 md:max-w-md lg:max-w-xl  xl:max-w-3xl">
           <p>Dates: 01-08-2021 - 04-02-2022 </p>
           <p>Organisation: IT Jack LTD</p>
           <p>Position: IT assistant</p>
