@@ -61,22 +61,23 @@ const AboutMe = (props, ref) => {
           animate={controls}
           className="col-start-2 rounded-2xl bg-indigo-700/50 p-4"
         >
-          <p className=" mb-4   ">
-            Hi! my name is shundee and I spend way too much time at my computer.
-            I enjoy building things for the web I'm a logical thinking
-            individual that has a talent for picking up and learning new
-            technologies quite quickly.
+          <p className=" mb-4">
+            Hi! My name is shundee and I enjoy building things for the web. I
+            did a level 3 software & programming course a few years ago and I
+            still remember the feeling of printing "hello world" for the first
+            time using C++.
           </p>
           <p className=" mb-4">
-            Though I learnt the basics of programming during my college years,
-            most of my current programming skills I have taught myself with the
-            help of the internet and some good practice.
+            Fast forward a few years I'm now able to build mini games and entire
+            Websites using all sorts cool technologies. That course taught me
+            the basics, but most of my current coding skills I have taught
+            myself with the help of the internet and a ton of practice.
           </p>
           <p className=" mb-4">
             Recenlty I had the pleasure of working at a software company in
-            London. In the future I hope for the opportunity to be part of
+            London. In the future, I hope for the opportunity to be part of
             larger, more meaningful projects and to become an expert in
-            Javascript as well as learn Python while i'm at it .
+            Javascript as well as learn Python while i'm at it.
           </p>
         </motion.div>
         <motion.h2

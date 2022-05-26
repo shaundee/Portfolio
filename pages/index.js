@@ -25,21 +25,6 @@ const Home = () => {
   const [showLoader, setLoader] = useRecoilState(showLoaderState)
   const [pageEnd, setPageEnd] = useState('')
 
-  const endOfPage = () => {
-    if (window.pageYOffset > 3200) {
-      setPageEnd('closeToEndOfPage')
-      console.log('close TO End')
-    } else {
-      setPageEnd('hide')
-    }
-  }
-  useEffect(() => {
-    document.addEventListener('scroll', endOfPage)
-    return () => {
-      document.removeEventListener('scroll', endOfPage)
-    }
-  }, [])
-
   return showLoader === false ? (
     <div className={`select-none font-serif`} ref={homeRef}>
       <Head>
@@ -58,20 +43,6 @@ const Home = () => {
         <Experience ref={workRef} />
         <Contact ref={contactRef} />
       </main>
-      <div
-        onClick={() =>
-          window.scrollTo({
-            top: homeRef?.current.offsetTop,
-            behavior: 'smooth',
-          })
-        }
-        title="Back to top"
-        className={`${
-          pageEnd === 'closeToEndOfPage' && 'bottom-10 '
-        } fixed left-2/4 -bottom-10 z-50 flex h-10 w-10 -translate-x-2/4 items-center justify-center rounded-full bg-black text-fuchsia-900 duration-300 hover:cursor-pointer hover:text-emerald-300 `}
-      >
-        <GiFlamingArrow className=" h-8 w-8 -rotate-[135deg] " />
-      </div>
     </div>
   ) : (
     <InitialLoader />

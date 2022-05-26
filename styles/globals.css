@@ -38,7 +38,7 @@
     @apply text-fuchsia-900 hover:!bg-indigo-700 hover:text-emerald-300;
   }
   .menu {
-    @apply mt-16 h-full hover:cursor-pointer md:hidden;
+    @apply mt-20 h-full  md:hidden;
   }
   /* Project */
   .projectHeaders {
