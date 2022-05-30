@@ -48,7 +48,7 @@ const ParticlesBG = () => {
   return (
     <div className=" flex h-screen w-screen items-center justify-center ">
       <motion.div
-        className="absolute z-10 flex h-[180px] w-[180px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-l-emerald-300 border-b-emerald-300  border-t-transparent border-r-transparent
+        className="absolute z-10 flex h-[180px] w-[180px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-t-0 border-r-0  border-l-emerald-300 border-b-emerald-300
          bg-slate-900/50  hover:border-fuchsia-900  hover:bg-slate-900/0 hover:duration-300 hover:ease-in-out"
         animate={{ scale: [0, 1], rotate: 360 }}
         transition={spinTransition}
@@ -73,7 +73,7 @@ const ParticlesBG = () => {
           variants={animateVariants}
           initial="init"
           animate="visible"
-          className="Typewriter"
+          className="Typewriter bg-black/20"
         >
           <Typewriter
             words={[
@@ -85,8 +85,8 @@ const ParticlesBG = () => {
             cursor
             cursorStyle=".."
             typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
+            deleteSpeed={10}
+            delaySpeed={1500}
           />
         </motion.div>
       )}

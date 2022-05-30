@@ -11,8 +11,8 @@
 @layer components {
   /* Home */
   .Typewriter {
-    @apply absolute  left-2/4 top-2/3 mt-10  flex flex w-full -translate-x-2/4  
-     -translate-y-2/3 justify-center rounded-md  text-center  font-mono text-sm  font-semibold md:text-lg;
+    @apply absolute  left-2/4 top-[70%] mt-20 flex  h-32  w-full  -translate-y-[70%] -translate-x-2/4 items-center  
+     justify-center rounded-md  p-4 text-center  font-mono text-base font-semibold text-emerald-300 md:max-w-lg md:text-lg;
   }
 
   /* navBar */
@@ -97,9 +97,6 @@
     animation-play-state: paused;
   }
 
-  .items {
-    border: white;
-  }
   .items:first-child {
     transform: rotateY(calc(40deg)) translateZ(130px);
   }

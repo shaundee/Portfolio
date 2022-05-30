@@ -43,7 +43,7 @@ const Experience = (props, ref) => {
         variants={experienceVariants}
         initial="init"
         animate={controls}
-        className="mb-10 flex flex-col self-center px-4 text-center font-mono text-2xl font-semibold text-white md:self-start md:pl-20 md:text-left md:text-4xl"
+        className="mb-10 flex flex-col self-center px-4 text-center font-mono text-2xl font-semibold text-white md:self-start md:pl-20 md:text-left md:text-4xl lg:pl-40"
       >
         Work
         <hr className="w-[200%] self-center border-fuchsia-900 md:self-start "></hr>

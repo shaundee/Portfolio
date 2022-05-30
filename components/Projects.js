@@ -72,7 +72,7 @@ const Projects = (props, ref) => {
         variants={h1Variant}
         initial="init"
         animate={h1Controls}
-        className={`mb-10 flex flex-col px-8 text-left font-mono text-2xl font-semibold text-white md:self-start md:text-4xl`}
+        className={`mb-10 flex flex-col px-8 text-left font-mono text-2xl font-semibold text-white md:self-start md:text-4xl lg:pl-40`}
       >
         Personal Projects & Clones{' '}
         <hr className="w-[110%] self-center border-fuchsia-900 md:w-[125%] md:self-start"></hr>

@@ -68,10 +68,10 @@ const AboutMe = (props, ref) => {
             time using C++.
           </p>
           <p className=" mb-4">
-            Fast forward a few years I'm now able to build mini games and entire
-            Websites using all sorts cool technologies. That course taught me
-            the basics, but most of my current coding skills I have taught
-            myself with the help of the internet and a ton of practice.
+            Fast forward a few years I'm now able to build entire Websites using
+            all sorts cool technologies. That course taught me the basics, but
+            most of my current coding skills I have taught myself with the help
+            of the internet and practice.
           </p>
           <p className=" mb-4">
             Recenlty I had the pleasure of working at a software company in
