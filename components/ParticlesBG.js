@@ -48,8 +48,8 @@ const ParticlesBG = () => {
   return (
     <div className=" flex h-screen w-screen items-center justify-center ">
       <motion.div
-        className="absolute z-10 flex h-[120px] w-[120px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-t-slate-900 border-r-slate-900  border-l-emerald-300 border-b-emerald-300
-         bg-slate-900/50 hover:border-fuchsia-900 hover:bg-slate-900/0  hover:duration-300  hover:ease-in-out md:h-[180px] md:w-[180px]"
+        className="absolute z-10 flex h-[120px] w-[120px] -translate-x-2/4 rounded-full border-b-[8px] border-l-[8px] border-t-[1px] border-r-[1px] border-emerald-300
+         bg-slate-900/50 shadow-xl shadow-indigo-700/10 hover:border-fuchsia-900  hover:bg-slate-900/0 hover:duration-300 hover:ease-in-out md:h-[180px] md:w-[180px]"
         animate={{ scale: [0, 1], rotate: 360 }}
         transition={spinTransition}
       ></motion.div>

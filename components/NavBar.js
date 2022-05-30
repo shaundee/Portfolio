@@ -77,7 +77,15 @@ const NavBar = (props, ref) => {
 
   return (
     <div
-      className={`
+      className={`${
+        direction === 'down'
+          ? '-translate-y-24 shadow-sm duration-300 ease-in-out'
+          : direction === 'up'
+          ? ' shadow-md backdrop-blur duration-200 ease-in-out'
+          : direction === 'isTopOfPage'
+          ? '  backdrop-blur-none duration-300 ease-in-out '
+          : ''
+      }
       
        fixed top-0 z-50 flex h-20 min-w-full items-center justify-between space-x-4 border-emerald-300/40 bg-slate-900/90  px-8 shadow-sm  shadow-emerald-300/40  md:px-16 `}
     >
