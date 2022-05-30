@@ -12,10 +12,12 @@ import {motion} from 'framer-motion'
 const menuIconVariants = {
   init: {
     opacity: 0,
+    y:-40,
   
   },
   visible: {
     opacity: 1,
+    y:0,
   
 
     transition: {
@@ -51,7 +53,7 @@ function BasicMenu(props, ref) {
     <motion.div variants={menuIconVariants}
     initial="init"
     animate="visible">
-        <Button className='   '
+        <Button className='  '
        id="basic-button"
              aria-controls={open ? 'basic-menu' : undefined}
              aria-haspopup="true"
@@ -60,10 +62,10 @@ function BasicMenu(props, ref) {
       
       >
         <VscMenu 
-          className=  {`${open === true ? 'translate-x-40 ease-in duration-300 ':'-translate-x-0 ease-in duration-300  '}  absolute h-8 w-8 -top-0 translate-y-2/4 `}/>
+          className=  {`${open === true ? 'translate-x-40 ease-in duration-300 ':'-translate-x-0 ease-in duration-300  '}  absolute h-8 w-8 -top-0 translate-y-2/4 text-emerald-300`}/>
        <MdClose 
          className={` ${open === true? 'translate-y-0 ease-in-out duration-300 ':
-       ' ease-in-out duration-300 -translate-y-40 '}  h-8 w-8 absolute top-4 translate-y-0`} />
+       ' ease-in-out duration-300 -translate-y-40 '}  h-8 w-8 absolute top-4 translate-y-0 text-emerald-300`} />
       </Button>
       </motion.div>
     

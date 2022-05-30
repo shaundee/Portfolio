@@ -29,7 +29,7 @@ const InitialLoader = () => {
       }relative flex h-screen items-center justify-center bg-black/50`}
     >
       <motion.div
-        className="absolute h-[180px] w-[180px] rounded-full border-t-[6px] border-l-[6px] border-fuchsia-900  "
+        className="absolute h-[100px] w-[100px] rounded-full border-t-[6px] border-l-[6px] border-fuchsia-900 md:h-[120px] md:w-[120px]  "
         animate={{ scale: [0, 1, 1, 1, 1, 2, 0], rotate: 360 }}
         transition={spinTransition}
       ></motion.div>
@@ -39,7 +39,7 @@ const InitialLoader = () => {
         animate={{ scale: [0, 1, 1, 1, 1, 1, 0] }}
         transition={growTransition}
       >
-        <div className="relative  flex h-[150px] w-[150px] rounded-full duration-200 ease-in  ">
+        <div className="relative flex h-[80px] w-[80px] rounded-full duration-200 ease-in md:h-[150px] md:w-[150px]  ">
           <Image src={logo} className="mx-auto rounded-full " />
         </div>
       </motion.div>

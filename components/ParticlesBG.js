@@ -48,8 +48,8 @@ const ParticlesBG = () => {
   return (
     <div className=" flex h-screen w-screen items-center justify-center ">
       <motion.div
-        className="absolute z-10 flex h-[180px] w-[180px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-t-0 border-r-0  border-l-emerald-300 border-b-emerald-300
-         bg-slate-900/50  hover:border-fuchsia-900  hover:bg-slate-900/0 hover:duration-300 hover:ease-in-out"
+        className="absolute z-10 flex h-[120px] w-[120px] -translate-x-2/4 rounded-full border-b-[6px] border-l-[6px] border-t-slate-900 border-r-slate-900  border-l-emerald-300 border-b-emerald-300
+         bg-slate-900/50 hover:border-fuchsia-900 hover:bg-slate-900/0  hover:duration-300  hover:ease-in-out md:h-[180px] md:w-[180px]"
         animate={{ scale: [0, 1], rotate: 360 }}
         transition={spinTransition}
       ></motion.div>
@@ -59,7 +59,7 @@ const ParticlesBG = () => {
         animate={{ scale: [0, 1] }}
         transition={growTransition}
       >
-        <div className="relative  flex h-[150px] w-[150px] rounded-full   ">
+        <div className="relative flex h-[100px] w-[100px] rounded-full md:h-[150px] md:w-[150px]   ">
           <Image
             src={me}
             objectFit="contain"
@@ -73,7 +73,7 @@ const ParticlesBG = () => {
           variants={animateVariants}
           initial="init"
           animate="visible"
-          className="Typewriter bg-black/20"
+          className="Typewriter "
         >
           <Typewriter
             words={[

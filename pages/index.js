@@ -14,7 +14,7 @@ import { useRecoilState, useRecoilValue } from 'recoil'
 import { directionState, showLoaderState } from '../atoms/elementRefAtoms'
 import InitialLoader from '../components/InitialLoader'
 import { motion } from 'framer-motion'
-// let closeToEndOfPage = 3400
+
 const Home = () => {
   const projectsRef = useRef(null)
   const aboutRef = useRef(null)
@@ -23,7 +23,6 @@ const Home = () => {
   const homeRef = useRef(null)
 
   const [showLoader, setLoader] = useRecoilState(showLoaderState)
-  const [pageEnd, setPageEnd] = useState('')
 
   return showLoader === false ? (
     <div className={`select-none font-serif`} ref={homeRef}>
@@ -32,9 +31,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {!showLoader && (
-        <NavBar ref={[projectsRef, aboutRef, workRef, contactRef, homeRef]} />
-      )}
+      <NavBar ref={[projectsRef, aboutRef, workRef, contactRef, homeRef]} />
 
       <main className="">
         <ParticlesBG />
