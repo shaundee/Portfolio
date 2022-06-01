@@ -4,20 +4,33 @@
 
 @layer base {
   body {
-    @apply bg-slate-900  text-white scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-slate-500;
+    @apply bg-slate-900  text-white scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-emerald-300;
   }
 }
 
 @layer components {
-  /* Home */
+  /* ParticlesBG Component */
+  .photoOuterRing {
+    @apply absolute z-10 flex h-[120px] w-[120px] -translate-x-2/4 rounded-full
+     border-b-[8px] border-l-[8px] border-t-[1px] border-r-[1px] border-emerald-300
+    bg-emerald-500/20 shadow-xl shadow-indigo-700/10 hover:bg-slate-900/0 
+    hover:duration-300 hover:ease-in-out md:h-[180px] md:w-[180px];
+  }
   .Typewriter {
-    @apply absolute  left-2/4 top-[70%] mt-20 flex  h-32  w-full  -translate-y-[70%] -translate-x-2/4 items-center  
-     justify-center rounded-md  p-4 text-center  font-mono text-base font-semibold text-emerald-300 md:max-w-lg md:text-lg;
+    @apply absolute  left-2/4 top-[70%] mt-20 flex  h-32  w-full 
+     -translate-y-[70%] -translate-x-2/4 items-center  justify-center rounded-md  
+     p-4 text-center  font-mono text-base font-semibold text-emerald-300 md:max-w-lg
+     md:text-lg;
   }
 
-  /* navBar */
+  /* Navigation Bar */
   .navLinks {
-    @apply cursor-pointer select-none border-b-2 border-transparent font-mono text-lg  font-bold text-emerald-300 transition-all hover:border-emerald-300  hover:text-purple-600;
+    @apply cursor-pointer select-none border-b-2 border-transparent font-mono text-lg 
+    font-bold text-emerald-300 transition-all hover:border-emerald-300 hover:text-purple-600;
+  }
+  .nav {
+    @apply fixed top-0 z-50 flex h-20 min-w-full items-center justify-between space-x-4 border-emerald-300/40 
+    bg-slate-900/90 px-8 shadow-sm shadow-emerald-300/40 md:px-16;
   }
 
   /* Image Slider */
@@ -35,28 +48,78 @@
     @apply !absolute !right-0 !top-0 !flex !h-full !items-center !rounded-none !bg-indigo-900/20 !text-white backdrop-blur-sm;
   }
   .menu .MuiMenuItem-root {
-    @apply text-fuchsia-900 hover:!bg-indigo-700 hover:text-emerald-300;
+    @apply text-emerald-300 hover:text-fuchsia-900;
   }
   .menu {
     @apply mt-20 h-full  md:hidden;
   }
-  /* Project */
-  .projectHeaders {
-    @apply flex justify-around bg-indigo-900 p-4 text-center text-base text-emerald-300 lg:text-xl;
+  /* Projects */
+  .project__Header {
+    @apply mb-10 flex flex-col px-8 text-left font-mono text-2xl font-semibold text-white md:self-start md:text-4xl lg:pl-40;
   }
-  .projectIcons {
+  .project__Headers {
+    @apply flex justify-around p-4 text-center text-base text-white md:pt-10 lg:text-xl;
+  }
+  .project__Icons {
     @apply h-6 w-6 text-emerald-300 hover:text-fuchsia-900;
   }
-  .projectImage {
+  .project__Image {
     @apply rounded-md transition-all ease-in hover:cursor-pointer hover:opacity-100 md:opacity-60;
   }
-  .projectBodies {
+  .project__Bodies {
     @apply mx-auto flex min-h-[24rem]  flex-col justify-center bg-black/90 bg-center p-8
     text-center bg-blend-darken md:max-w-2xl md:bg-black/0 md:text-left;
   }
-  .techUsed {
+  .tech__Used {
     @apply border border-emerald-300 p-1;
   }
+  /* About ME*/
+  .aboutme__Container {
+    @apply flex flex-col items-center justify-center bg-slate-900 bg-[url('https://wallpapercave.com/wp/wp2553589.jpg')]  
+    bg-auto bg-bottom px-10 bg-blend-darken md:h-screen md:px-20 md:text-lg lg:text-xl;
+  }
+  .aboutme__Header {
+    @apply col-span-2 mb-10 flex flex-col text-center font-mono text-2xl text-white md:text-right md:text-4xl;
+  }
+  .skills__Header {
+    @apply col-span-3 col-start-1 mx-auto mt-4 mb-4  text-left font-mono text-xl text-white md:col-span-1 md:row-span-1
+     md:row-start-2 md:text-4xl;
+  }
+  .skills {
+    @apply col-span-3 col-start-1  mb-10 mt-24 md:col-span-1 md:row-span-3 md:row-start-4 md:-mt-72 lg:-mt-24;
+  }
+  /* Experience*/
+  .experience__Container {
+    @apply flex h-[100vh] flex-col justify-center gap-y-10 bg-slate-900/95 
+    bg-[url('https://magazine.fbk.eu/wp-content/uploads/2018/08/Fotolia_FAS.jpg')] bg-cover bg-center px-4 
+    bg-blend-hue md:pr-32 md:text-lg lg:text-xl xl:text-2xl;
+  }
+  .experience__Header {
+    @apply mb-10 flex flex-col self-center px-4 text-center font-mono text-2xl font-semibold 
+    text-white md:self-start md:pl-20 md:text-left md:text-4xl lg:pl-40;
+  }
+  .experience__TextContainer {
+    @apply absolute top-2/4 z-10 max-w-[30rem] -translate-y-2/4 rounded-2xl 
+    bg-emerald-500/50 p-4 text-left md:left-32 md:max-w-md lg:max-w-xl xl:max-w-3xl;
+  }
+  /* Contact*/
+  .contact__Container {
+    @apply flex h-[100vh] flex-col justify-center bg-slate-900 bg-[url('../public/backDrops/TREE.jpg')] 
+    bg-auto bg-center px-4 bg-blend-darken;
+  }
+  .contact__Header {
+    @apply mx-auto mb-10 border-b border-fuchsia-900 px-4 text-center font-mono text-2xl font-semibold
+     text-white md:text-4xl;
+  }
+  .contact__TextContainer {
+    @apply mx-auto mb-8 flex  h-[200px] w-[200px]  items-center rounded-full  border-t-[6px] border-l-[6px] 
+    border-emerald-300  bg-emerald-500/30 p-8 text-center text-xl  md:h-[300px] md:w-[300px];
+  }
+  .contact__button {
+    @apply w-48 self-center rounded-md border-2 border-emerald-300 p-4 transition
+     ease-in-out hover:bg-emerald-500/50;
+  }
+
   /* slider */
   .rotator {
     position: absolute;

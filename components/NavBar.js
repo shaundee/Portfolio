@@ -85,9 +85,7 @@ const NavBar = (props, ref) => {
           : direction === 'isTopOfPage'
           ? '  backdrop-blur-none duration-300 ease-in-out '
           : ''
-      }
-      
-       fixed top-0 z-50 flex h-20 min-w-full items-center justify-between space-x-4 border-emerald-300/40 bg-slate-900/90  px-8 shadow-sm  shadow-emerald-300/40  md:px-16 `}
+      } nav`}
     >
       <a href="/">
         <motion.div
@@ -108,7 +106,7 @@ const NavBar = (props, ref) => {
               animate="visible"
               className="rounded-full border-4 border-transparent"
             >
-              <div className="relative flex  rounded-full  duration-200 ease-in   ">
+              <div className="relative flex  rounded-full  duration-200 ease-in">
                 <div className=" absolute z-10 flex rounded-full bg-slate-900/20 duration-200 ease-in "></div>
                 <Image
                   src={logo}

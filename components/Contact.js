@@ -29,17 +29,13 @@ const Contact = (props, ref) => {
     }
   }, [controls, inView])
   return (
-    <div
-      ref={ref}
-      id="contact"
-      className="flex h-[100vh] flex-col justify-center  bg-slate-900 bg-[url('../public/backDrops/TREE.jpg')] bg-auto bg-center  px-4 bg-blend-darken "
-    >
+    <div ref={ref} className="contact__Container">
       <motion.h1
         ref={elRef}
         variants={contactVariants}
         initial="init"
         animate={controls}
-        className="mx-auto mb-10 border-b border-fuchsia-900 px-4 text-center font-mono text-2xl font-semibold text-white md:text-4xl"
+        className="contact__Header"
       >
         Contact Me
       </motion.h1>
@@ -48,8 +44,7 @@ const Contact = (props, ref) => {
         variants={contactVariants}
         initial="init"
         animate={controls}
-        className=" mx-auto mb-8 flex  h-[200px] w-[200px]  items-center rounded-full  border-t-[6px] border-l-[6px] border-fuchsia-900 bg-indigo-700/50 bg-cyan-900 p-8 text-center
-      text-xl  md:h-[300px] md:w-[300px]"
+        className=" contact__TextContainer"
       >
         want to get in touch? Or just want to say hi? Then go ahead.
       </motion.p>
@@ -60,9 +55,9 @@ const Contact = (props, ref) => {
           initial="init"
           animate={controls}
           title="Email Me"
-          className=" w-48 self-center rounded-md border-2 border-fuchsia-900 p-4 transition ease-in-out hover:border-emerald-300 hover:bg-indigo-500/30"
+          className="contact__button"
         >
-          say hello!
+          Say Hello!
         </motion.button>
       </Link>
     </div>

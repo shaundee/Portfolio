@@ -2,10 +2,8 @@ import Particles from 'react-tsparticles'
 import { useRecoilState } from 'recoil'
 import { loadFull } from 'tsparticles'
 import { showLoaderState } from '../atoms/elementRefAtoms'
-import NavBar from './NavBar'
 import { motion } from 'framer-motion'
 import me from '../public/me.jpg'
-import logo from '../public/logo.jpg'
 import Image from 'next/image'
 import { Typewriter } from 'react-simple-typewriter'
 
@@ -48,8 +46,7 @@ const ParticlesBG = () => {
   return (
     <div className=" flex h-screen w-screen items-center justify-center ">
       <motion.div
-        className="absolute z-10 flex h-[120px] w-[120px] -translate-x-2/4 rounded-full border-b-[8px] border-l-[8px] border-t-[1px] border-r-[1px] border-emerald-300
-         bg-slate-900/50 shadow-xl shadow-indigo-700/10 hover:border-fuchsia-900  hover:bg-slate-900/0 hover:duration-300 hover:ease-in-out md:h-[180px] md:w-[180px]"
+        className=" photoOuterRing "
         animate={{ scale: [0, 1], rotate: 360 }}
         transition={spinTransition}
       ></motion.div>
@@ -59,7 +56,7 @@ const ParticlesBG = () => {
         animate={{ scale: [0, 1] }}
         transition={growTransition}
       >
-        <div className="relative flex h-[100px] w-[100px] rounded-full md:h-[150px] md:w-[150px]   ">
+        <div className="relative flex h-[100px] w-[100px] rounded-full md:h-[150px] md:w-[150px]">
           <Image
             src={me}
             objectFit="contain"

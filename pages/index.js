@@ -6,14 +6,13 @@ import Projects from '../components/Projects'
 
 import AboutMe from '../components/AboutMe'
 import Experience from '../components/Experience'
-import { Typewriter } from 'react-simple-typewriter'
+
 import Contact from '../components/Contact'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { GiFlamingArrow } from 'react-icons/gi'
 import { useRecoilState, useRecoilValue } from 'recoil'
-import { directionState, showLoaderState } from '../atoms/elementRefAtoms'
+import { showLoaderState } from '../atoms/elementRefAtoms'
 import InitialLoader from '../components/InitialLoader'
-import { motion } from 'framer-motion'
 
 const Home = () => {
   const projectsRef = useRef(null)
@@ -33,7 +32,7 @@ const Home = () => {
 
       <NavBar ref={[projectsRef, aboutRef, workRef, contactRef, homeRef]} />
 
-      <main className="">
+      <main>
         <ParticlesBG />
         <Projects ref={projectsRef} />
         <AboutMe ref={aboutRef} />

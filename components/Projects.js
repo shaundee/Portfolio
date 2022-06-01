@@ -3,10 +3,7 @@ import netflix from '../public/netflix.png'
 import APOD from '../public/APOD.png'
 import spotify from '../public/spotify.png'
 import Link from 'next/link'
-import { projectsState } from '../atoms/elementRefAtoms'
-import { useRecoilState } from 'recoil'
-import React, { useEffect, useRef } from 'react'
-import scrollToSection from '../lib/scrollTo'
+import React, { useEffect } from 'react'
 import { RiGithubLine } from 'react-icons/ri'
 import { MdOutlineOpenInNew } from 'react-icons/md'
 import { motion, useAnimation } from 'framer-motion'
@@ -72,7 +69,7 @@ const Projects = (props, ref) => {
         variants={h1Variant}
         initial="init"
         animate={h1Controls}
-        className={`mb-10 flex flex-col px-8 text-left font-mono text-2xl font-semibold text-white md:self-start md:text-4xl lg:pl-40`}
+        className="project__Header"
       >
         Personal Projects & Clones{' '}
         <hr className="w-[110%] self-center border-fuchsia-900 md:w-[125%] md:self-start"></hr>
@@ -87,16 +84,16 @@ const Projects = (props, ref) => {
       >
         <motion.div
           variants={projectVariants}
-          className="col flex flex-col justify-between bg-indigo-700/50 "
+          className="col flex flex-col justify-between bg-emerald-500/50"
         >
-          <h2 className="projectHeaders ">
+          <h2 className="project__Headers ">
             <a
               href="https://github.com/shaundee/Nasa-APOD"
               alt="Github"
               title="Github"
               target="blank"
             >
-              <RiGithubLine className="projectIcons" />
+              <RiGithubLine className="project__Icons" />
             </a>
             NASA-APOD
             <a
@@ -105,19 +102,19 @@ const Projects = (props, ref) => {
               title="Open Externally"
               target="blank"
             >
-              <MdOutlineOpenInNew className="projectIcons" />
+              <MdOutlineOpenInNew className="project__Icons" />
             </a>
           </h2>
-          <div className="projectBodies bg-[url('../public/APOD.png')] md:bg-none">
+          <div className="project__Bodies bg-[url('../public/APOD.png')] md:bg-none">
             <Link href="https://nasa-apod-smoky.vercel.app/">
               <motion.div
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                 className="mb-4 hidden md:inline"
               >
-                <Image className="projectImage" src={APOD} />
+                <Image className="project__Image" src={APOD} />
               </motion.div>
             </Link>
-            <p className="  ">
+            <p>
               Discover the cosmos with the Nasa Astronomy Picture of the day.
               Everyday A majestic new image or video gets featured along with a
               brief description. Have a look at your most recent birthday. Enjoy
@@ -128,16 +125,16 @@ const Projects = (props, ref) => {
 
         <motion.div
           variants={projectVariants}
-          className="col flex flex-col justify-between bg-indigo-700/50"
+          className="col flex flex-col justify-between bg-emerald-500/50"
         >
-          <h2 className="projectHeaders ">
+          <h2 className="project__Headers ">
             <a
               href="https://github.com/shaundee/spotify-API-build"
               alt="Github"
               title="Github"
               target="blank"
             >
-              <RiGithubLine className="projectIcons" />
+              <RiGithubLine className="project__Icons" />
             </a>
             Spotify-Clone
             <a
@@ -146,16 +143,16 @@ const Projects = (props, ref) => {
               title="Open Externally"
               target="blank"
             >
-              <MdOutlineOpenInNew className="projectIcons" />
+              <MdOutlineOpenInNew className="project__Icons" />
             </a>
           </h2>
-          <div className="projectBodies bg-[url('../public/spotify.png')] bg-cover bg-left md:bg-none ">
+          <div className="project__Bodies bg-[url('../public/spotify.png')] bg-cover bg-left md:bg-none ">
             <Link href="https://spotify-sooty.vercel.app/login">
               <motion.div
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                 className="mb-4 hidden md:inline"
               >
-                <Image className="projectImage" src={spotify} />
+                <Image className="project__Image" src={spotify} />
               </motion.div>
             </Link>
             <p className="  ">
@@ -169,16 +166,16 @@ const Projects = (props, ref) => {
 
         <motion.div
           variants={projectVariants}
-          className=" col flex flex-col justify-between bg-indigo-700/50"
+          className=" col flex flex-col justify-between bg-emerald-500/50"
         >
-          <h2 className="projectHeaders">
+          <h2 className="project__Headers">
             <a
               href="https://github.com/shaundee/netflix-clone"
               alt="Github"
               title="Github"
               target="blank"
             >
-              <RiGithubLine className="projectIcons" />
+              <RiGithubLine className="project__Icons" />
             </a>
             Netflix-Clone
             <a
@@ -187,16 +184,16 @@ const Projects = (props, ref) => {
               title="Open Externally"
               target="blank"
             >
-              <MdOutlineOpenInNew className="projectIcons" />
+              <MdOutlineOpenInNew className="project__Icons" />
             </a>
           </h2>
-          <div className="projectBodies bg-[url('../public/netflix.png')] bg-left-top md:bg-none">
+          <div className="project__Bodies bg-[url('../public/netflix.png')] bg-left-top md:bg-none">
             <Link href="https://netflix-clone-shaundee.vercel.app/">
               <motion.div
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                 className="mb-4 hidden md:inline"
               >
-                <Image className="projectImage " src={netflix} />
+                <Image className="project__Image " src={netflix} />
               </motion.div>
             </Link>
             <p className="  ">
