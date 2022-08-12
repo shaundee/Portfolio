@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-
+import Image from 'next/dist/client/image'
 import BasicMenu from './BasicMenu'
 import { useRecoilState } from 'recoil'
 import { directionState } from '../atoms/elementRefAtoms'
 import { motion } from 'framer-motion'
 import logo from '../public/logo.jpg'
-import Image from 'next/image'
+
 const linkVariants = {
   init: {
     opacity: 0,
@@ -85,7 +85,7 @@ const NavBar = (props, ref) => {
           : direction === 'isTopOfPage'
           ? '  backdrop-blur-none duration-300 ease-in-out '
           : ''
-      } nav`}
+      } nav `}
     >
       <a href="/">
         <motion.div
@@ -124,7 +124,7 @@ const NavBar = (props, ref) => {
         variants={linkVariants}
         initial="init"
         animate={'visible'}
-        className="  hidden space-x-16 p-4 md:flex md:transition-all md:duration-[.8s]"
+        className="  hidden items-center space-x-16 p-4 md:flex md:transition-all md:duration-[.8s]"
       >
         <motion.li
           variants={linkVariants}
@@ -134,7 +134,7 @@ const NavBar = (props, ref) => {
               behavior: 'smooth',
             })
           }
-          className="navLinks"
+          className="navLinks "
         >
           Home
         </motion.li>

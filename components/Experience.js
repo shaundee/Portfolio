@@ -38,7 +38,7 @@ const Experience = (props, ref) => {
         variants={experienceVariants}
         initial="init"
         animate={controls}
-        className="experience__Header"
+        className="experience__Header mx-auto"
       >
         Work
         <hr className="w-[200%] self-center border-fuchsia-900 md:self-start "></hr>

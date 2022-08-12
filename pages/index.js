@@ -1,16 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import ParticlesBG from '../components/ParticlesBG'
 import NavBar from '../components/NavBar'
 import Projects from '../components/Projects'
-
 import AboutMe from '../components/AboutMe'
 import Experience from '../components/Experience'
-
 import Contact from '../components/Contact'
 import { useRef } from 'react'
-import { GiFlamingArrow } from 'react-icons/gi'
-import { useRecoilState, useRecoilValue } from 'recoil'
+import { useRecoilState } from 'recoil'
 import { showLoaderState } from '../atoms/elementRefAtoms'
 import InitialLoader from '../components/InitialLoader'
 
@@ -21,7 +17,7 @@ const Home = () => {
   const contactRef = useRef(null)
   const homeRef = useRef(null)
 
-  const [showLoader, setLoader] = useRecoilState(showLoaderState)
+  const [showLoader] = useRecoilState(showLoaderState)
 
   return showLoader === false ? (
     <div className={`select-none font-serif`} ref={homeRef}>
@@ -32,7 +28,7 @@ const Home = () => {
 
       <NavBar ref={[projectsRef, aboutRef, workRef, contactRef, homeRef]} />
 
-      <main>
+      <main className="">
         <ParticlesBG />
         <Projects ref={projectsRef} />
         <AboutMe ref={aboutRef} />

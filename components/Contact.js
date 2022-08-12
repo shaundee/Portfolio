@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+import { RiGithubLine } from 'react-icons/ri'
+import { MdOutlineHorizontalRule } from 'react-icons/md'
 const contactVariants = {
   init: {
     opacity: 0,
@@ -60,6 +62,33 @@ const Contact = (props, ref) => {
           Say Hello!
         </motion.button>
       </Link>
+      <footer className="mt-52 flex w-full flex-col justify-center space-y-3 self-center">
+        <p className="flex flex-col items-center  text-xs">
+          Built by
+          <span className="mt-2 flex gap-x-1  text-base text-emerald-300">
+            <div className=" h-0.5  w-20 self-center rounded-full  bg-fuchsia-900"></div>
+            Shaundee Wilson
+            <div className=" h-0.5  w-20 self-center rounded-full  bg-fuchsia-900 "></div>
+          </span>
+        </p>
+
+        <p className="flex flex-col items-center text-xs">
+          <span className=" flex gap-x-1 text-base text-emerald-300 ">
+            <div className=" h-0.5 w-40  self-center rounded-full  bg-fuchsia-900"></div>
+            <a
+              href="https://github.com/shaundee"
+              title="GitHub Profile"
+              target="blank"
+            >
+              <span className="flex cursor-pointer gap-1 hover:text-fuchsia-900 ">
+                GitHub <RiGithubLine className="h-6 w-6 " />
+              </span>
+            </a>
+
+            <div className=" h-0.5 w-40  self-center rounded-full  bg-fuchsia-900"></div>
+          </span>
+        </p>
+      </footer>
     </div>
   )
 }
