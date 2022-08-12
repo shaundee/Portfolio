@@ -621,11 +621,6 @@
     "node-gyp" "^9.0.0"
     "read-package-json-fast" "^2.0.3"
 
-"@pdftron/webviewer@^8.7.0":
-  "integrity" "sha512-Ji0a6A+2HFNMlTpBmTNO10sgizQnmybqZOkJkanU46CLegn4rRaTMBEmAlXWoUaY0M/bx2Br1FHHeS6MTjhb1w=="
-  "resolved" "https://registry.npmjs.org/@pdftron/webviewer/-/webviewer-8.7.0.tgz"
-  "version" "8.7.0"
-
 "@popperjs/core@^2.11.5":
   "integrity" "sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.5.tgz"
